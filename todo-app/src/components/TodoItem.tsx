@@ -1,11 +1,10 @@
-import React, { ChangeEvent, useRef, useState } from "react";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { ITodoItem } from "../interface";
 import {
-  addTodos,
   removeTodos,
-  updateTodos,
+  updateTodos
 } from "../redux/reducer";
-import { useDispatch, useSelector } from "react-redux";
 
 
 const TodoItem = (props: ITodoItem) => {

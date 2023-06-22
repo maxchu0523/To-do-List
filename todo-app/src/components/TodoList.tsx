@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
+import { v4 as uuidv4 } from 'uuid';
+import { ITodoItem } from "../interface";
 import {
   addTodos,
 } from "../redux/reducer";
-import TodoItem from './TodoItem'
-import { v4 as uuidv4 } from 'uuid';
-import { ITodoItem } from "../interface";
+import TodoItem from './TodoItem';
 
-const ToDoList = (props: any) => {
+const ToDoList = () => {
   const dispatch = useDispatch()
 
   const todos = useSelector((state: any) => state);
