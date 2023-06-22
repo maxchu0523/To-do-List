@@ -49,16 +49,16 @@ const TodoItem = (props: ITodoItem) => {
                 !todo.completed ?
                   <>
                     <p className="w-full text-grey-darkest">{todo.todo}</p>
-                    <button onClick={onClickUpdate} className="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded hover:text-white text-grey border-grey hover:bg-grey">Completed</button>
+                    <button onClick={onClickUpdate} className="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded text-grey border-grey hover:bg-slate-300">Check</button>
                   </>
                   :
                   <>
                     <p className="w-full line-through text-grey-darkest">{todo.todo}</p>
-                    <button onClick={onClickUpdate} className="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded hover:text-white text-green border-green hover:bg-green">Not Completed</button>
+                    <button onClick={onClickUpdate} className="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded text-green border-green hover:bg-slate-300">Uncheck</button>
                   </>
               }
 
-              <button onClick={onClickrRemove} className="flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red hover:text-white hover:bg-red">Remove</button>
+              <button onClick={onClickrRemove} className="flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red hover:bg-slate-300">Remove</button>
             </div>
 
           </>
